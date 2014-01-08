@@ -40,7 +40,6 @@ end
 
 group :test, :development do
   # Pretty printed test output
-  gem 'debugger'
   gem 'awesome_print'
   gem 'interactive_editor'
   gem 'launchy'
@@ -52,6 +51,7 @@ end
 
 group :development do
   gem 'heroku'
+  gem 'debugger'
 end
 
 group :test do
