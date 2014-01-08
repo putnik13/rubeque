@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '~> 3.2.12'
+gem 'rails', '~> 3.2.16'
 
 gem 'aws-ses', '~> 0.4.4', :require => 'aws/ses'
 gem 'chosen-rails'
