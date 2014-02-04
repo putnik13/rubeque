@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/duckinator/sicuro
-  revision: c20b9cb1318fe5690e7d39d62a727d608d2c5da1
-  specs:
-    sicuro (0.19.0)
-      standalone (~> 0.5.0)
-
-GIT
   remote: git://github.com/mongoid/mongoid
   revision: 367fc3f066252c839e04710e1ea5682aae33e6c2
   ref: 367fc3f066252c839e04710e1ea5682aae33e6c2
@@ -247,6 +240,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    sicuro (0.20.0)
+      standalone (~> 0.5.0)
     simple_oauth (0.2.0)
     spoon (0.0.1)
     sprockets (2.2.2)
@@ -324,7 +319,7 @@ DEPENDENCIES
   rubyheap (~> 0.1.2)
   sass-rails (~> 3.2.3)
   selenium-webdriver
-  sicuro!
+  sicuro (~> 0.20.0)
   trackman
   turn (= 0.8.2)
   twitter

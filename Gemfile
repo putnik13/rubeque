@@ -21,7 +21,7 @@ gem 'omniauth-openid'
 gem 'rack-timeout'
 gem 'rinku'
 gem 'rubyheap', '~> 0.1.2'
-gem 'sicuro', :git => "git://github.com/duckinator/sicuro"
+gem "sicuro", "~> 0.20.0"
 gem 'trackman'
 gem 'twitter'
 gem 'uuid', '~> 2.3.5'
