@@ -41,4 +41,14 @@ module ApplicationHelper
     css = {class: "gravatar"}.merge(css)
     image_tag gravatar_url(email, options), css
   end
+
+  def application_version
+    version = "#{APP_VERSION["major"]}.#{APP_VERSION["minor"]}.#{APP_VERSION["revision"]}"
+    version += ".rc-#{APP_VERSION['release_candidate']}" if APP_VERSION['release_candidate'].present?
+
+    version
+  rescue
+    ""
+  end
+
 end

@@ -52,6 +52,7 @@ end
 group :development do
   gem 'heroku'
   gem 'debugger'
+  gem 'git_rails_tagger', git: 'git@git.scimedsolutions.com:scimed/git_rails_tagger.git'
 end
 
 group :test do
