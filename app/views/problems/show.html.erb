@@ -74,8 +74,11 @@
     <%= f.text_area :code %>
     <div id="editor" class="code-editor"></div>
   </div>
-  <div class="clear"></div>
+  <div class='ruby-badge'>
+    Ruby <%= link_to RUBY_VERSION, "http://ruby-doc.org/core-#{RUBY_VERSION}/" %>
+  </div>
   <%= f.submit "Submit", confirm: (@solution.new_record? ? "" : "You've already solved this problem. Are you sure you want to change your solution?") %>
+  <div class="clear"></div>
 <% end -%>
 <br/>
 

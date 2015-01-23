@@ -68,7 +68,7 @@ div {
   border: 1px solid green;
   color: green;
   background-color: $green; }
-  
+
 #error, #warning, #alert {
   border: 1px solid #B11000;
   color: #B11000;
@@ -133,7 +133,7 @@ table {
     border: 1px solid #ccc;
     padding: 4px 6px;
   }
-  
+
   th {
     font-family: "Droid Sans", Arial, Sans-serif;
     font-size: 14pt;
@@ -141,7 +141,7 @@ table {
     color: #444;
     text-shadow: 1px 1px #fff;
   }
-  
+
   tr:nth-of-type(even) {
     background-color: $background;
   }
@@ -477,7 +477,7 @@ div.links {
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #efefef 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, rgba(255, 255, 255, 0), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #efefef 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%,#efefef 100%); /* Opera11.10+ */ 
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%,#efefef 100%); /* Opera11.10+ */
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%,#efefef 100%); /* IE10+ */
   background: linear-gradient(top, rgba(255, 255, 255, 0) 0%,#efefef 100%); /* W3C */
 }
@@ -530,3 +530,19 @@ a.twitter {
   .links {
     margin-top: 4em; }
   }
+
+.ruby-badge {
+  float: right;
+  border-radius: 4px;
+  background-color: #B11000;
+  color: white;
+  padding: 0px 0px 0px 4px;
+
+  a {
+    text-decoration: none;
+    color: #B11000;
+    background-color: white;
+    border-radius: 2px;
+    padding: 0px 4px;
+  }
+}
