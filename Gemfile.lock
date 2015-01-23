@@ -9,12 +9,6 @@ GIT
       origin (~> 1.0)
       tzinfo (~> 0.3.22)
 
-GIT
-  remote: git@git.scimedsolutions.com:scimed/git_rails_tagger.git
-  revision: f7057f9873c73f985a7a95f4f3e861e9ba019817
-  specs:
-    git_rails_tagger (0.0.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -305,7 +299,6 @@ DEPENDENCIES
   devise
   exception_notification
   fakefs
-  git_rails_tagger!
   heroku
   interactive_editor
   jquery-rails
