@@ -1,0 +1,54 @@
+<h1><%='Unapproved ' if (params[:action] == 'unapproved') -%>Problems</h1>
+
+<table id="problems">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Tags</th>
+      <th>Difficulty</th>
+      <th>Solutions</th>
+      <th>Submitter</th>
+      <% if current_user %>
+        <th>Score</th>
+        <th>Solved</th>
+      <% end %>
+    </tr>
+  </thead>
+
+  - p 'current_user-------------------------------------------------'
+  - p current_user
+  <tbody>
+    <% @problems.each do |practical_tasks| %>
+      <tr class="practical_tasks" id="<%= practical_tasks.id %>">
+        <td><%= link_to practical_tasks.title, practical_task_path(practical_tasks.id) %></td>
+        <td><%= practical_tasks.tag_list %></td>
+        <td><%= practical_tasks.difficulty_word %></td>
+        <td><%= practical_tasks.solutions.count %></td>
+        <td><%= practical_tasks.creator %></td>
+        -# p current_user.solved_practical_tasks
+        <% if current_user %>
+          <td></td>
+          <td class="solved-mark"></td>
+        <% end -%>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<div class="clear"></div>
+
+<%= content_tag "div", class: "links" do %>
+  <% if current_user %>
+    <%= link_to 'Submit a practical_tasks', new_problem_path, id: 'new_practical_tasks' %> |
+  <% end -%>
+
+  <% if current_user_admin? %>
+    <% if params[:action] == "unapproved" %>
+      <%= link_to "Back to practical tasks", practical_tasks_path() %> |
+    <% else %>
+      <%= link_to "View Unapproved practical tasks", unapproved_practical_tasks_path() %> |
+    <% end -%>
+  <% end %>
+
+<% end -%>

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.1.2'
 
 gem 'rails', '~> 3.2.16'
 
@@ -51,7 +51,7 @@ end
 
 group :development do
   gem 'heroku'
-  gem 'debugger'
+  gem 'pry'
 end
 
 group :test do

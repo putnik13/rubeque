@@ -1,6 +1,6 @@
 <div id="landing-page">
   <div class="hero-unit">
-    <h1>Welcome to Rubeque!</h1>
+    <h1>Добрый день!</h1>
     <p><strong><%= number_with_delimiter(Solution.count) %></strong> solutions submitted by <strong><%= number_with_delimiter(User.count) %></strong> users</p>
     <p>
       <%= button_to "Get Started", problems_path, method: :get %>
@@ -8,18 +8,10 @@
   </div>
 
   <div class="blurb">
-    <p>"What is Rubeque?" you ask. Good question! Rubeque is a place to hone your Ruby skills by solving small Ruby problems while competing against other Rubyists.
-    Whether you are new to Ruby or just looking to sharpen your Ruby skills, Rubeque should have something to offer.</p>
+    <p>"Здесь можно проверить домашние задания по курсу Руби.</p>
 
     <p>As for the problems, the premise is simple: simply fill the code box with Ruby code to be substituted for the underscores (___) in the problem. If code
-    passes the assertions, then you get points and you can move on to another problem.</p>
+    passes the assertions, then you get points and you can move on to another problem. Good luck!</p>
 
-    <p>Once you have solved all the problems, feel free to visit <%= link_to "our github page", "https://github.com/SciMed/rubeque" %> to contribute code.
-    Alternatively, you can click <%= link_to "the new problem link", new_problem_path %> to submit a problem of your own. Also, keep checking back as new problems
-    are posted on a regular basis. Good luck!</p>
-
-    <div class="ad">
-      <p>Interested in programming for the company responsible for Rubeque? <%= link_to "SciMed Solutions is hiring", ad_path %>.</p>
-    </div>
   </div>
 </div>

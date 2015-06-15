@@ -9,11 +9,18 @@ Rubeque::Application.routes.draw do
     get 'unapproved', on: :collection
     put 'approve', on: :member
     get 'rss', on: :collection
+    post 'run_code' => "problems#run_code"
 
     resources :solutions, except: [:new] do
       get "share", on: :collection
       get "report", on: :member
     end
+  end
+  
+  resources :practical_tasks do
+    get 'unapproved', on: :collection
+    put 'approve', on: :member
+    post 'run_code' => "practical_tasks#run_code"
   end
 
   resources :audits

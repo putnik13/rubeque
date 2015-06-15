@@ -41,7 +41,7 @@ class SolutionsController < ApplicationController
     @solution = Solution.new(params[:solution])
     @solution.problem = @problem = Problem.find(params[:problem_id])
     @solution.user = current_user
-
+    p @solution
     respond_to do |format|
       if run_and_save_solution(@solution)
         notice = 'Your solution passed!'

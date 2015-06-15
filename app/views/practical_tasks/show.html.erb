@@ -67,8 +67,7 @@
   </p>
 <% end -%>
 Run code:
-
-<%= form_for [@problem, @solution] do |f| -%>
+<%= form_for @problem, url: problem_run_code_path(@problem), method: :post, remote: true do |f| -%>
   <%= f.hidden_field :id %>
   <div class="field code-editor-field">
     <%= f.text_area :code %>
@@ -78,37 +77,6 @@ Run code:
     Ruby <%= link_to RUBY_VERSION, "http://ruby-doc.org/core-#{RUBY_VERSION}/" %>
   </div>
   <%= f.submit "Submit" %>
-  <div class="clear"></div>
-<% end -%>
-<br/>
-
-<%= form_for [@problem, @solution] do |f| -%>
-  <%= form_errors @solution %>
-  <%= f.hidden_field :problem_id %>
-  <div class="field code-editor-field">
-    <%= f.text_area :code %>
-    <div id="editor" class="code-editor"></div>
-  </div>
-  <div class='ruby-badge'>
-    Ruby <%= link_to RUBY_VERSION, "http://ruby-doc.org/core-#{RUBY_VERSION}/" %>
-  </div>
-  <%= f.submit "Submit", confirm: (@solution.new_record? ? "" : "You've already solved this problem. Are you sure you want to change your solution?") %>
-  <div class="clear"></div>
-<% end -%>
-<br/>
-
-
-<%= form_for [@problem, @solution] do |f| -%>
-  <%= form_errors @solution %>
-  <%= f.hidden_field :problem_id %>
-  <div class="field code-editor-field">
-    <%= f.text_area :code %>
-    <div id="editor" class="code-editor"></div>
-  </div>
-  <div class='ruby-badge'>
-    Ruby <%= link_to RUBY_VERSION, "http://ruby-doc.org/core-#{RUBY_VERSION}/" %>
-  </div>
-  <%= f.submit "Submit", confirm: (@solution.new_record? ? "" : "You've already solved this problem. Are you sure you want to change your solution?") %>
   <div class="clear"></div>
 <% end -%>
 <br/>

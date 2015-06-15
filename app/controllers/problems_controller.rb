@@ -66,7 +66,24 @@ class ProblemsController < ApplicationController
       end
     end
   end
-  
+  def run_code
+    p params[:problem]
+    timelimit = 5
+    memlimit  = 350
+
+    sandbox = Sicuro.new(memlimit, timelimit)
+    result = sandbox.eval(params[:problem][:code])
+    p '---'*10
+    p result.stderr
+    p result.stdout
+    p 
+    #executor = CodeExecutor.new(params[:problem][:code], {})
+    #result = executor.execute
+    #<Sicuro::Eval code="a = 10\r\np a + 1\r\n\r\np 100\r\n 1 == 1" stdout="11\n100\n" stderr="" wall_time=441>
+
+    render json: {code: result.code, stderr: result.stderr,  stdout: result.stdout.to_s.split('\n')}
+
+  end
   def approve
     @problem = Problem.find(params[:id])
     @problem.approved = true

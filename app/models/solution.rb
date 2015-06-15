@@ -40,12 +40,17 @@ class Solution
   end
 
   def run_problem
-    executor = CodeExecutor.new(combined_code, excluded_methods: problem.excluded_methods)
+    executor = CodeExecutor.new(combined_code, {
+      excluded_methods: problem.excluded_methods,
+      full_code:  self.code,
+      func: 'solution(params)',
+      result: true
+    })
     result = executor.execute
     executor.errors.each {|e| errors.add(:base, e)}
     self.time = executor.time
     return result
-  end
+  end   
 
   def self.duplicates(callback = nil, sort = :asc)
     duplicates = []
@@ -63,9 +68,16 @@ class Solution
     duplicates
   end
 
-  def combined_code
+  def combined_code2
     full_code = problem.code.clone
     full_code += ("\n" + problem.hidden_code) if problem.hidden_code
+    #full_code.gsub("___"){self.code}
+
+  end
+
+  def combined_code
+    full_code = problem.code.clone
+    #full_code += ("\n" + problem.hidden_code) if problem.hidden_code
     full_code.gsub("___"){self.code}
   end
 
