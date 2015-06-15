@@ -7,7 +7,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   field :username
-  validates :username, presence: true, uniqueness: true
+  # validates :username, presence: true, uniqueness: true
 
   field :email
   field :score, type: Integer
@@ -18,7 +18,7 @@ class User
   ## Database authenticatable
   field :email,              :type => String
   field :encrypted_password, :type => String
-  validates :email, :encrypted_password, presence: true
+  # validates :email, :encrypted_password, presence: true
 
   ## Recoverable
   field :reset_password_token,   :type => String

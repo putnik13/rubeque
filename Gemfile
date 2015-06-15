@@ -25,6 +25,10 @@ gem "sicuro", "~> 0.21.0"
 gem 'trackman'
 gem 'twitter'
 gem 'uuid', '~> 2.3.5'
+gem 'execjs'
+gem 'therubyracer'
+gem 'thin'
+gem 'figaro', github: 'laserlemon/figaro'
 
 # Gems used only for assets and not required in production environments
 # by default.
@@ -51,7 +55,8 @@ end
 
 group :development do
   gem 'heroku'
-  gem 'debugger'
+  # gem 'byebug', '~> 5.0.0'
+  # gem 'columnize', '~> 0.9.0'
 end
 
 group :test do
